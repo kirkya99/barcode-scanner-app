@@ -30,4 +30,4 @@ npm run build
 
 ### Web App Link
 
-See [Web App]()
+See [Web App](https://gentle-desert-023790103.3.azurestaticapps.net)
