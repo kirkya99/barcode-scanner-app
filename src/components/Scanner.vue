@@ -26,14 +26,11 @@ export default {
     // },
     sendId()
     {
-        axios.post('https://backendappscanner.azurewebsites.net/', this.decodedText)
-
+        axios.post('http://localhost:4000/setProducts', this.decodedText)
     }
-
   }
 };
 </script>
-
 
 <template>
     <div id="app">
@@ -43,11 +40,16 @@ export default {
       <StreamBarcodeReader @decode="onDecode" @loaded="onLoaded"></StreamBarcodeReader>
   
     </div>
-    <!-- <div v-if="decodedText"> -->
-      <div>
+    <div v-if="decodedText">
       <h2>Decoded Text:</h2>
       <p>{{ decodedText }}</p>
       <button @click="sendId">Save Barcode</button>        
     </div>
     
-  </template>
+</template>
+
+<style>
+  div{
+    text-align: center;
+  }
+</style>
