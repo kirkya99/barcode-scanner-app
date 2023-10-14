@@ -37,7 +37,7 @@ import axios from 'axios';
 </template>
 
 <style>
-td {
+tr {
     text-align: center;
 }
 </style>
