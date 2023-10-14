@@ -16,7 +16,7 @@ export default {
   methods: {
     onDecode(result) {
       this.decodedText = result;
-      sendId()
+      // sendId()
     },
     onLoaded() {
       console.log("Scanner loaded and ready!");
@@ -26,7 +26,7 @@ export default {
     // },
     sendId()
     {
-        axios.post('https://backendscannerapp.azurewebsites.net/', this.decodedText)
+        axios.post('https://backendappscanner.azurewebsites.net/', this.decodedText)
 
     }
 
