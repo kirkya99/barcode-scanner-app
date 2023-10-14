@@ -1,18 +1,18 @@
 <script>
 import axios from 'axios';
 
-    export default{
-        // props: ['idNumber'],
-        created() {
-            this.fetchList()
-        },
-        data() {
-            return {
-                productArray: []
-            }
-        },
-        methods: {
-            fetchList() {
+export default {
+    // props: ['idNumber'],
+    created() {
+        this.fetchList()
+    },
+    data() {
+        return {
+            productArray: []
+        }
+    },
+    methods: {
+        fetchList() {
             const options = {
                 method: 'GET',
                 url: 'http://localhost:4000/',
@@ -23,9 +23,9 @@ import axios from 'axios';
                     this.productArray = response.data
                 })
                 .catch(console.error);
-            },
-        }
+        },
     }
+}
 </script>
 
 <template>
@@ -40,13 +40,14 @@ import axios from 'axios';
 tr {
     text-align: center;
 }
+
 ul {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
 
 li {
-  margin: 10px 0;
-  font-size: 16px; 
+    margin: 10px 0;
+    font-size: 16px;
 }
 </style>
