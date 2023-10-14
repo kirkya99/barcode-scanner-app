@@ -2,9 +2,9 @@
 import Scanner from '../components/Scanner.vue'
 import ProductInformation from '../components/ProductInformation.vue';
 
-export default{
+export default {
   components: {
-     Scanner, ProductInformation
+    Scanner, ProductInformation
   },
   data() {
     return {
@@ -16,7 +16,7 @@ export default{
 
 <template>
   <main>
-    <Scanner/>
-    <ProductInformation/>
+    <Scanner />
+    <ProductInformation />
   </main>
 </template>
