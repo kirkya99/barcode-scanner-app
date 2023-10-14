@@ -23,7 +23,7 @@ import axios from 'axios';
                     this.productArray = response.data
                 })
                 .catch(console.error);
-        },
+            },
         }
     }
 </script>
