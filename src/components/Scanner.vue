@@ -34,11 +34,12 @@ export default {
 
 <template>
     <div id="app">
-      <!-- <h1>Barcode & QR Code Scanner</h1> -->
-  
-      
-      <StreamBarcodeReader @decode="onDecode" @loaded="onLoaded"></StreamBarcodeReader>
-  
+      <div id="pic">
+        <!-- <h1>Barcode & QR Code Scanner</h1> -->
+    
+        
+        <StreamBarcodeReader @decode="onDecode" @loaded="onLoaded"></StreamBarcodeReader>
+      </div>
     </div>
     <div v-if="decodedText">
       <h2>Decoded Text:</h2>
@@ -49,7 +50,27 @@ export default {
 </template>
 
 <style>
-  div{
-    text-align: center;
-  }
+body {
+  background-color: rgb(176, 253, 167);
+}
+div {
+  text-align: center;
+}
+#pic {
+  border: 2.5px solid  black;
+  padding: 5px; 
+  text-align: center;
+}
+button {
+  background-color: #019626; 
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+
+button:hover {
+  background-color: #9dff00; 
+}
 </style>

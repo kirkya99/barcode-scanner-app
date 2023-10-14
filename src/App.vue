@@ -18,7 +18,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <style>
   template {
-    background-color: bisque;
+    background-color: rgb(255, 255, 255);
     padding-left: 1%;
     padding-right: 1%;
   }
