@@ -16,7 +16,7 @@ export default {
   methods: {
     onDecode(result) {
       this.decodedText = result;
-      sendId()
+      // sendId()
     },
     onLoaded() {
       console.log("Scanner loaded and ready!");
