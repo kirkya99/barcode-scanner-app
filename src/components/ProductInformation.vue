@@ -40,4 +40,13 @@ import axios from 'axios';
 td {
     text-align: center;
 }
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  font-size: 16px; 
+}
 </style>
