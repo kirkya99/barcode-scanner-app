@@ -1,5 +1,6 @@
 <script>
     export default{
+        // props: ['idNumber'],
         data() {
             return {
                 productId: 1,

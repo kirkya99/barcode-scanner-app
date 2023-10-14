@@ -1,9 +1,15 @@
 <script>
 import Scanner from '../components/Scanner.vue'
+import ProductInformation from '../components/ProductInformation.vue';
 
 export default{
   components: {
-     Scanner
+     Scanner, ProductInformation
+  },
+  data() {
+    return {
+      id: ""
+    }
   }
 }
 </script>
@@ -11,5 +17,6 @@ export default{
 <template>
   <main>
     <Scanner/>
+    <ProductInformation/>
   </main>
 </template>
