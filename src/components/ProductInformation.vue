@@ -1,12 +1,31 @@
 <script>
+import axios from 'axios';
+
     export default{
         // props: ['idNumber'],
+        created() {
+            this.fetchList()
+        },
         data() {
             return {
-                productId: 1,
-                productName: "Product",
-                productImage: "Product.png"
+                productArray: []
             }
+        },
+        methods: {
+            fetchList() {
+            const options = {
+                method: 'GET',
+                //url: ,
+                //headers: {
+                //}
+            }
+
+            axios.request(options)
+                .then(response => {
+                    this.productArray = response.data
+                })
+                .catch(console.error);
+        },
         }
     }
 </script>
