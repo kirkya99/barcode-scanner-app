@@ -30,7 +30,6 @@ export default {
     sendId(code) {
       axios.post('http://localhost:4000/setProducts', { code })
         .then(response => {
-          // Wenn Sie eine Antwort vom Server erhalten möchten, können Sie sie hier verarbeiten
           console.log("Barcode wurde erfolgreich gespeichert:", response.data);
         })
         .catch(error => {
