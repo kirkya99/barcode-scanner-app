@@ -26,7 +26,7 @@ export default {
     // },
     sendId()
     {
-        axios.post('https://backendscannerapp.azurewebsites.net/', this.decodedText)
+        axios.post('https://backendappscanner.azurewebsites.net/', this.decodedText)
 
     }
 
