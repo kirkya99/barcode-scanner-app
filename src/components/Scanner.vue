@@ -1,5 +1,6 @@
 <script>
 import { StreamBarcodeReader } from "vue-barcode-reader";
+import axios from 'axios'
 
 export default {
   // TODO: Add Emits
@@ -25,7 +26,8 @@ export default {
     // },
     sendId()
     {
-        this.$emit('addToList', this.decodedText)
+        axios.post('https://backendscannerapp.azurewebsites.net/', this.decodedText)
+
     }
 
   }
@@ -41,8 +43,11 @@ export default {
       <StreamBarcodeReader @decode="onDecode" @loaded="onLoaded"></StreamBarcodeReader>
   
     </div>
-    <div v-if="decodedText">
+    <!-- <div v-if="decodedText"> -->
+      <div>
       <h2>Decoded Text:</h2>
-      <p>{{ decodedText }}</p>        
+      <p>{{ decodedText }}</p>
+      <button @click="sendId">Save Barcode</button>        
     </div>
+    
   </template>
