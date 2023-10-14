@@ -15,9 +15,7 @@ import axios from 'axios';
             fetchList() {
             const options = {
                 method: 'GET',
-                //url: ,
-                //headers: {
-                //}
+                url: 'https://backendscannerapp.azurewebsites.net/',
             }
 
             axios.request(options)
@@ -31,7 +29,11 @@ import axios from 'axios';
 </script>
 
 <template>
-    <p><b>Produktnummer:</b> {{ productId }}</p>
-    <p><b>Produktname:</b> {{ productName }}</p>
-    <img :src="productImage" alt="Kein Bild des Produkts verfügbar"/>
+    <table>
+        <tr v-for="product in productArray">
+            <p><b>Produktnummer:</b> {{ productId }}</p>
+            <p><b>Produktname:</b> {{ productName }}</p>
+            <img :src="productImage" alt="Kein Bild des Produkts verfügbar"/>
+        </tr>
+    </table>
 </template>
