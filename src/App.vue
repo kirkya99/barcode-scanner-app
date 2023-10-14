@@ -8,22 +8,22 @@ import { RouterLink, RouterView } from 'vue-router'
   <header>
     <h1>Scanner App</h1>
   </header>
-     <main>
-        <RouterLink to="/"></RouterLink>
-     </main>
-  
+  <main>
+    <RouterLink to="/"></RouterLink>
+  </main>
+
 
   <RouterView />
 </template>
 
 <style>
-  template {
-    background-color: rgb(255, 255, 255);
-    padding-left: 1%;
-    padding-right: 1%;
-  }
-  header{
-    text-align: center;
-  }
+template {
+  background-color: rgb(255, 255, 255);
+  padding-left: 1%;
+  padding-right: 1%;
+}
 
+header {
+  text-align: center;
+}
 </style>
