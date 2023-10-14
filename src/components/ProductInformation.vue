@@ -29,11 +29,12 @@ export default {
 </script>
 
 <template>
-    <table>
+    <!-- TODO: Fix this -->
+    <!-- <table>
         <tr v-for="product in productArray">
             <td><b>Produktnummer:</b> {{ product }}</td>
         </tr>
-    </table>
+    </table> -->
 </template>
 
 <style>
