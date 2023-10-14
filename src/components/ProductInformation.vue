@@ -31,7 +31,7 @@ export default {
 <template>
     <table>
         <tr v-for="product in productArray">
-            <td><b>Produktnummer:</b> {{ productId }}</td>
+            <td><b>Produktnummer:</b> {{ product }}</td>
         </tr>
     </table>
 </template>
