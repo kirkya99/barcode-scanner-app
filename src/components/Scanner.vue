@@ -10,7 +10,7 @@ export default {
   },
   data() {
     return {
-      decodedText: []
+      decodedText: ""
     };
   },
   methods: {
@@ -24,11 +24,22 @@ export default {
     // onError(error) {
     //   console.error("Error while scanning:", error);
     // },
-    sendId() {
-      axios.post('http://localhost:4000/setProducts', this.decodedText)
+    // sendId() {
+    //   axios.post('http://localhost:4000/setProducts', this.decodedText)
+    // }
+    sendId(code) {
+      axios.post('http://localhost:4000/setProducts', { code })
+        .then(response => {
+          // Wenn Sie eine Antwort vom Server erhalten möchten, können Sie sie hier verarbeiten
+          console.log("Barcode wurde erfolgreich gespeichert:", response.data);
+        })
+        .catch(error => {
+          console.error("Fehler beim Speichern des Barcodes:", error);
+        });
     }
   }
-};
+}
+
 </script>
 
 <template>
